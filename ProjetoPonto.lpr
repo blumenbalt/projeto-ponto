@@ -10,7 +10,7 @@ uses
 var
   app: Aplicacao;
 begin
-  app.CrieObj;
+  app := Aplicacao.CrieObj;
   app.Execute_se;
   app.Destrua_se;
 end.

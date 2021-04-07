@@ -8,9 +8,9 @@ uses
 
 
 var
-  aplicacao: Aplicacao;
+  app: Aplicacao;
 begin
-  aplicacao.CrieObj;
+  app := Aplicacao.CrieObj;
   aplicacao.Execute_se;
   aplicacao.Destrua_se;
 end.

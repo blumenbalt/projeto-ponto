@@ -28,7 +28,7 @@ implementation
       umPonto.Destrua_se;
       aInter.Destrua_se;
     end;
-    Procedure Execute_se;
+    Procedure Aplicacao.Execute_se;
     var valorX, valorY, dist: real;
       outroPonto: Ponto;
     begin
@@ -39,6 +39,13 @@ implementation
          outroPonto.Redefina_se(valorX, valorY);
          umPonto.DetermineDistancia(outroPonto, dist);
          aInter.DigaDistancia(dist);
+         umPonto.DetermineDistanciaOrigem(dist);
+         aInter.DigaDistancia(dist);
+
+         aInter.DigaValoresPonto(umPonto);
+         aInter.EntreComDistancia(dist);
+         umPonto.DeslocaHorizontal(dist);
+         aInter.DigaValoresPonto(umPonto);
     end;
 
 end.

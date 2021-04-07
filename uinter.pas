@@ -5,13 +5,16 @@ unit uInter;
 interface
 
 uses
-  Classes, SysUtils;
+  Classes, SysUtils, uPonto;
   type Interfaces = class
     public
       constructor CrieObj;
       destructor Destrua_se;
       procedure DefinaPonto(var pValorX, pValorY :real);
       procedure DigaDistancia(Dist:real);
+      procedure DigaValoresPonto(pPonto:Ponto);
+      procedure EntreComDistancia(var dist:real);
+      procedure DigaCoeficiente(Dist:real);
   end;
 
 
@@ -36,6 +39,26 @@ end;
 procedure Interfaces.DigaDistancia(Dist:real);
 begin
   writeln('distancia e igual a: ', Dist);
+  readln();
+end;
+
+procedure Interfaces.DigaValoresPonto(pPonto:ponto);
+begin
+  writeln('X:', pPonto.getX());
+  writeln('Y:', pPonto.getY());
+  readln();
+end;
+
+procedure Interfaces.EntreComDistancia(var dist:real);
+begin
+    writeln('Digite um valor para distancia a ser percorrida horizontalmente: ');
+    readln(dist);
+end;
+
+procedure Interfaces.DigaCoeficiente(Dist:real);
+begin
+  writeln('o coeficiente e igual a: ', Dist);
+  readln();
 end;
 
 end.

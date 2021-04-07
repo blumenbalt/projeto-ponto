@@ -39,6 +39,15 @@ implementation
          outroPonto.Redefina_se(valorX, valorY);
          umPonto.DetermineDistancia(outroPonto, dist);
          aInter.DigaDistancia(dist);
+         umPonto.DetermineDistanciaOrigem(dist);
+         aInter.DigaDistancia(dist);
+
+         aInter.DigaValoresPonto(umPonto);
+         aInter.EntreComDistancia(dist);
+         umPonto.DeslocaHorizontal(dist);
+         aInter.DigaValoresPonto(umPonto);
+         umPonto.DetermineCoeficiente(OutroPonto,dist);
+         aInter.DigaCoeficiente(dist);
     end;
 
 end.
